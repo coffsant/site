@@ -24,7 +24,7 @@
 
 <?php include("app/include/header.php"); ?>
 
-<!-- блок карусели START-->
+<!-- блок карусели -->
 
 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -36,7 +36,6 @@
         </button>
     </div>
 </div>
-<!-- блок карусели END-->
 
 <!-- блок main-->
 <div class="container">
@@ -64,7 +63,7 @@
             <?php endforeach; ?>
 
         </div>
-        <!-- sidebar Content -->
+        <!-- sidebar -->
         <div class="sidebar col-md-3 col-12">
 
             <div class="section search">

@@ -11,7 +11,7 @@ $status = 0;
 $comments = [];
 
 
-// Код для формы создания комментария
+// Форма создания комментария
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['goComment'])){
 
 
@@ -65,7 +65,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['pub_id'])){
 }
 
 
-// АПДЕЙТ СТАТЬИ
+// Апдейт статьи
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])){
     $oneComment = selectOne('comments', ['id' => $_GET['id']]);
     $id =  $oneComment['id'];

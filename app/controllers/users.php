@@ -16,7 +16,7 @@ function userAuth($user){
 
 $users = selectAll('users');
 
-// Код для формы регистрации
+// Форма регистрации
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])){
 
     $admin = 0;
@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])){
     $email = '';
 }
 
-// Код для формы авторизации
+// Форма авторизации
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])){
 
     $email = trim($_POST['mail']);
@@ -73,9 +73,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])){
     $email = '';
 }
 
-// Код добавления пользователя в админке
+// Добавление пользователя в админке
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create-user'])){
-
 
     $admin = 0;
     $login = trim($_POST['login']);
@@ -112,14 +111,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create-user'])){
     $email = '';
 }
 
-// Код удаления пользователя в админке
+// Удаление пользователя в админке
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['delete_id'])){
     $id = $_GET['delete_id'];
     delete('users', $id);
     header('location: ' . BASE_URL . 'admin/users/index.php');
 }
 
-// РЕДАКТИРОВАНИЕ ПОЛЬЗОВАТЕЛЯ ЧЕРЕЗ АДМИНКУ
+// Редактирование пользователя через админку
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['edit_id'])){
     $user = selectOne('users', ['id' => $_GET['edit_id']]);
 

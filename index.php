@@ -10,7 +10,6 @@
     $posts = selectAllFromPostsWithUsersOnIndex('posts', 'users', $limit, $offset);
     $topTopic = selectTopTopicFromPostsOnIndex('posts');
 
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -30,7 +29,7 @@
 <?php include("app/include/header.php"); ?>
 
 
-<!-- блок карусели START-->
+<!-- блок карусели -->
 <div class="container">
     <div class="row">
         <h2 class="slider-title">Топ публикации</h2>
@@ -61,7 +60,6 @@
         </button>
     </div>
 </div>
-<!-- блок карусели END-->
 
 <!-- блок main-->
 <div class="container">
@@ -89,7 +87,7 @@
             <?php endforeach; ?>
             <?php include("app/include/pagination.php"); ?>
         </div>
-        <!-- sidebar Content -->
+        <!-- sidebar -->
         <div class="sidebar col-md-3 col-12">
 
             <div class="section search">
@@ -110,15 +108,10 @@
                     <?php endforeach; ?>
                 </ul>
             </div>
-
         </div>
-
     </div>
-
 </div>
 
-
-<!-- блок main END-->
 <!-- footer -->
 <?php include("app/include/footer.php"); ?>
 

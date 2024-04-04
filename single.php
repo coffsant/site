@@ -38,12 +38,12 @@ $post = selectPostFromPostsWithUsersOnSingle('posts', 'users', $_GET['post']);
                 <div class="single_post_text col-12">
                     <?=$post['content'];?>
                 </div>
-                <!-- ИНКЛЮДИМ HTML БЛОК С КОММЕНТАРИЯМИ  --->
+                
                 <?php include("app/include/comments.php"); ?>
             </div>
 
         </div>
-        <!-- sidebar Content -->
+        <!-- sidebar -->
         <div class="sidebar col-md-3 col-12">
 
             <div class="section search">

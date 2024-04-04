@@ -1,6 +1,4 @@
-body{
-    background-color: #d4d3d3;
-}
+
 *{
     font-family: 'Comfortaa', cursive;
 }
@@ -12,6 +10,11 @@ h4,
 h5, 
 h6 {
     color: #5c5b5b;
+}
+body{
+    background-color: #d4d3d3;
+    margin: 0;
+    padding: 0;
 }
 body a {
     text-decoration: none;

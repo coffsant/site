@@ -16,7 +16,7 @@ $topics = selectAll('topics');
 $posts = selectAll('posts');
 $postsAdm = selectAllFromPostsWithUsers('posts', 'users');
 
-// Код для формы создания записи
+// Форма создания записи
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])){
 
     if (!empty($_FILES['img']['name'])){
@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])){
         $destination = ROOT_PATH . "\assets\media\posts\\" . $imgName;
 
 
-        if (strpos($fileType, 'image') === false) {
+        if (strpos($fileType, 'img') === false) {
             array_push($errMsg, "Подгружаемый файл не является изображением!");
         }else{
             $result = move_uploaded_file($fileTmpName, $destination);
@@ -74,7 +74,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])){
 }
 
 
-// АПДЕЙТ СТАТЬИ
+// Апдейт статьи
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])){
     $post = selectOne('posts', ['id' => $_GET['id']]);
 
@@ -99,7 +99,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit_post'])){
         $destination = ROOT_PATH . "\assets\media\posts\\" . $imgName;
 
 
-        if (strpos($fileType, 'image') === false) {
+        if (strpos($fileType, 'img') === false) {
             array_push($errMsg, "Подгружаемый файл не является изображением!");
         }else{
             $result = move_uploaded_file($fileTmpName, $destination);
